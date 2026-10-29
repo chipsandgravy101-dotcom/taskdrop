@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>TaskDrop</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">YOUR LOCAL CHECKLIST</p>
+          <h1>TaskDrop</h1>
+        </div>
+        <div class="server-status" aria-label="TaskDrop server status">
+          <span class="status-dot"></span>
+          <span>Listening on port 3000</span>
+        </div>
+      </header>
+
+      <section class="settings-row" aria-label="App settings">
+        <label class="toggle-label" for="autostart">
+          <input id="autostart" type="checkbox">
+          <span>Enable auto-start</span>
+        </label>
+        <p id="message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="list-section" aria-labelledby="checklist-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">STAY ON TRACK</p>
+            <h2 id="checklist-heading">Checklist</h2>
+          </div>
+          <span id="item-count" class="count-pill">0 items</span>
+        </div>
+        <ul id="items" class="items-list"></ul>
+        <p id="empty-state" class="empty-state">Nothing here yet. Send a task from your phone to get started.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Tasks stay on this computer.</p>
+        <button id="clear-completed" class="button button-secondary" type="button" disabled>Clear Completed</button>
+      </footer>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>

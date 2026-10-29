@@ -1,0 +1,68 @@
+{
+  "name": "taskdrop-desktop",
+  "version": "1.0.0",
+  "description": "TaskDrop LAN checklist receiver",
+  "main": "main.js",
+  "author": "TaskDrop",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "build": "electron-builder --win nsis"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "electron-squirrel-startup": "^1.0.1",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "electron": "^45.1.0",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.taskdrop.desktop",
+    "productName": "TaskDrop",
+    "directories": {
+      "output": "build",
+      "buildResources": ".."
+    },
+    "files": [
+      "main.js",
+      "server.js",
+      "db.js",
+      "overlay.js",
+      "tray.js",
+      "autostart.js",
+      "preload.js",
+      "renderer/**/*",
+      "overlay/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../taskdrop_icon.png",
+        "to": "taskdrop_icon.png"
+      }
+    ],
+    "win": {
+      "icon": "../taskdrop_icon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "TaskDrop"
+    }
+  }
+}

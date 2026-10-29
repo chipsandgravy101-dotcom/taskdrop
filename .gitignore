@@ -1,0 +1,8 @@
+desktop/node_modules/
+desktop/build/
+phone/.gradle/
+phone/local.properties
+phone/app/build/
+phone/build/
+phone/.idea/
+phone/.kotlin/
