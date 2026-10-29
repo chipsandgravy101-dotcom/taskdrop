@@ -1,3 +1,9 @@
+*Made with AI* 
+I used "Ask" from the Brave Browser/search engine to plan the whole project and write a prompt for Copilot in VS code using GPT-6 Luna. All free! It took about 8 hours. 
+I am amazed by the power of this AI stuff. 
+A week ago I could make a small app in PyCharm using tkinter. Now I have developed a android app that talks to a sever on my computer!!!
+I have a few projects that I want to get done. 
+
 # TaskDrop
 
 TaskDrop is a local-only phone-to-desktop checklist for one Android phone and one Windows desktop on the same Wi-Fi network. The phone keeps tasks in Room until the desktop confirms them; the desktop stores its checklist in SQLite. No cloud account or service is used.
