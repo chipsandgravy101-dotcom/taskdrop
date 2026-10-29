@@ -1,4 +1,4 @@
-*Made with AI* 
+*Made with AI* /n
 I used "Ask" from the Brave Browser/search engine to plan the whole project and write a prompt for Copilot in VS code using GPT-6 Luna. All free! It took about 8 hours. 
 I am amazed by the power of this AI stuff. 
 A week ago I could make a small app in PyCharm using tkinter. Now I have developed a android app that talks to a sever on my computer!!!
